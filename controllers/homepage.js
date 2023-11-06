@@ -7,6 +7,17 @@ router.get('/', async (req,res) => {
     const project = (projectData).map((project)=> project.dataValues);
 
     res.render('homepage', {project});
+
 });
+
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
 
 module.exports = router;
