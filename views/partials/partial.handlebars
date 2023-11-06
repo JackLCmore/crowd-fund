@@ -1,0 +1,13 @@
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <h2>Project Title:{{name}}</h2>
+  </div>
+  <div class="col-md-6">
+    <p>Date Created:{{date_created}}</p>
+    <p>{{description}}</p>
+  </div>
+  <div>
+    <p>{{#if needed_funding}} This Project Needs Funding! {{/if}}
+    {{#if !needed_funding}} This Project Is Fully Funded!{{/if}}</p>
+  </div>
+</div>
